@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login App</title>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+</head>
+<body>
+	<div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a href="/">Dashboard</a></li>
+            <li role="presentation"><a href="/users/login">Login</a></li>
+            <li role="presentation"><a href="/users/register">Register</a></li>
+            <li role="presentation"><a href="/users/logout">Logout</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Login App</h3>
+      </div>
+
+      <div class="row">
+        <div>
+        	{{#if success_msg}}
+        		<div class="alert alert-danger">{{success_msg}}</div>
+        	{{/if}}
+
+        	{{#if error_msg}}
+        		<div class="alert alert-danger">{{error_msg}}</div>
+        	{{/if}}
+
+        	{{#if error}}
+        		<div class="alert alert-danger">{{error}}</div>
+        	{{/if}}
+        	{{{body}}}
+        </div>
+
+      <footer class="footer">
+        <p>&copy; 2016 QA Source, Inc.</p>
+      </footer>
+
+    </div>
+
+</body>
+</html>
